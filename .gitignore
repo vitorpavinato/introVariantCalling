@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Resultados gerados durante a aula (não versionar)
+data/results/*
+!data/results/.gitkeep
+
+# Arquivos grandes intermediários
+*.sam
+*.bam
+*.bai

@@ -1,0 +1,5 @@
+#!/bin/bash
+# Executado pelo Binder após construir o ambiente conda.
+# Registra o kernel Bash para que os notebooks possam rodar células em Bash.
+set -e
+python -m bash_kernel.install --sys-prefix

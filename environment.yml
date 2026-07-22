@@ -4,11 +4,10 @@ channels:
   - bioconda
 dependencies:
   # --- Ferramentas de bioinformática (Data Carpentry - Wrangling Genomics) ---
-  - bwa=0.7.17          # alinhamento de reads ao genoma de referência
-  - samtools=1.9        # manipulação de SAM/BAM
-  - bcftools=1.8        # chamada e filtragem de variantes (VCF)
-  # --- Utilitários ---
-  - wget                # download dos dados
+  # A aula começa em samtools (assume-se que os alunos já viram read mapping),
+  # por isso bwa NÃO entra no Binder — o alinhamento foi feito na preparação.
+  - samtools=1.22       # manipulação de SAM/BAM
+  - bcftools=1.22       # chamada e filtragem de variantes (VCF)
   # --- Jupyter + kernel Bash ---
   - python=3.11
   - jupyterlab

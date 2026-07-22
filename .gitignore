@@ -5,11 +5,23 @@
 .ipynb_checkpoints/
 */.ipynb_checkpoints/*
 
-# Resultados gerados durante a aula (não versionar)
-data/results/*
-!data/results/.gitkeep
+# Reads FASTQ — usados apenas na preparação (bwa mem); pesados, não versionar
+data/trimmed_fastq_small/*.fastq
 
-# Arquivos grandes intermediários
+# Índices do bwa — gerados na preparação; não necessários na aula
+data/ref_genome/*.amb
+data/ref_genome/*.ann
+data/ref_genome/*.bwt
+data/ref_genome/*.pac
+data/ref_genome/*.sa
+
+# SAM intermediário — grande (128 MB), não versionar
 *.sam
+
+# Saídas geradas pelos alunos durante a aula (bcf, vcf, índices, etc.)
+data/results/
+
+# Ignorar BAM/BAI por padrão, EXCETO o BAM inicial da aula (ponto de partida)
 *.bam
 *.bai
+!data/bam/SRR2584866.aligned.sorted.bam

@@ -13,16 +13,18 @@ a demonstração diretamente no navegador, sem instalar nada.
 
 | Notebook | Conteúdo |
 |----------|----------|
-| `notebooks/04-variant-calling.ipynb` | Lição 4 — Alinhamento e chamada de variantes (`bwa`, `samtools`, `bcftools`) |
-| `notebooks/05-....ipynb`             | Lição 5 — *(a definir)* |
+| `notebooks/variant-calling.ipynb` | Chamada de variantes a partir de um alinhamento pronto (`samtools`, `bcftools`) |
+| `notebooks/05-....ipynb`          | Lição 5 — *(a definir)* |
 
 ## Ferramentas
 
 Definidas em [`environment.yml`](environment.yml):
 
-- **bwa** — alinhamento de *reads* ao genoma de referência
 - **samtools** — manipulação de arquivos SAM/BAM
 - **bcftools** — chamada e filtragem de variantes (VCF)
+
+> O alinhamento (`bwa`) foi feito na etapa de preparação; a aula parte de um BAM já
+> ordenado, então `bwa` não faz parte do ambiente do Binder.
 - **Jupyter + bash_kernel** — células executadas em Bash, idênticas ao terminal
 
 ## Dados

@@ -8,6 +8,9 @@
 # Reads FASTQ — usados apenas na preparação (bwa mem); pesados, não versionar
 data/trimmed_fastq_small/*.fastq
 
+# Índice .fai da referência — gerado automaticamente pelo bcftools mpileup
+data/ref_genome/*.fai
+
 # Índices do bwa — gerados na preparação; não necessários na aula
 data/ref_genome/*.amb
 data/ref_genome/*.ann

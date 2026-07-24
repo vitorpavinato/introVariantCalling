@@ -13,8 +13,14 @@ a demonstração diretamente no navegador, sem instalar nada.
 
 | Notebook | Conteúdo |
 |----------|----------|
-| `notebooks/variant-calling.ipynb` | Chamada de variantes a partir de um alinhamento pronto (`samtools`, `bcftools`) |
+| `notebooks/variant-calling.ipynb` | Chamada de variantes a partir de um alinhamento pronto: inspeção e indexação do BAM, `bcftools mpileup`/`call`, filtragem, e visualização com `samtools tview` + IGV-Web |
 | `notebooks/05-....ipynb`          | Lição 5 — *(a definir)* |
+
+### Visualização no IGV-Web
+
+A última seção usa o [IGV-Web](https://igv.org/app/) — roda no navegador, sem instalação.
+Para isso, três arquivos pequenos são versionados: a referência `ecoli_rel606.fasta`,
+seu índice `.fai` (exigido pelo IGV) e o VCF filtrado `SRR2584866_final_variants.vcf`.
 
 ## Ferramentas
 

@@ -15,7 +15,10 @@ data/ref_genome/*.ann
 data/ref_genome/*.bwt
 data/ref_genome/*.pac
 data/ref_genome/*.sa
-data/ref_genome/*.fai
+
+# O índice .fai é versionado: o IGV-Web exige FASTA + .fai para carregar a
+# referência como genoma customizado. São 29 bytes.
+!data/ref_genome/ecoli_rel606.fasta.fai
 
 # Anotações da referência: não usadas nesta aula
 data/ref_genome/*.gbff
@@ -31,3 +34,9 @@ results/*
 !results/bam/
 results/bam/*
 !results/bam/SRR2584866.aligned.sorted.bam
+
+# EXCEÇÃO: o VCF final (110 KB) é versionado para poder ser carregado por URL
+# no IGV-Web (Seção 6), sem que o aluno precise baixar nada do Binder.
+!results/vcf/
+results/vcf/*
+!results/vcf/SRR2584866_final_variants.vcf

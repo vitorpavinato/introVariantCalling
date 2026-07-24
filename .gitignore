@@ -5,26 +5,29 @@
 .ipynb_checkpoints/
 */.ipynb_checkpoints/*
 
-# Reads FASTQ — usados apenas na preparação (bwa mem); pesados, não versionar
+# --- Dados de entrada pesados (usados apenas na preparação) ---
+# Reads FASTQ (~330 MB): só servem para o bwa mem da preparação
 data/trimmed_fastq_small/*.fastq
 
-# Índice .fai da referência — gerado automaticamente pelo bcftools mpileup
-data/ref_genome/*.fai
-
-# Índices do bwa — gerados na preparação; não necessários na aula
+# Índices da referência: gerados por bwa index / samtools faidx
 data/ref_genome/*.amb
 data/ref_genome/*.ann
 data/ref_genome/*.bwt
 data/ref_genome/*.pac
 data/ref_genome/*.sa
+data/ref_genome/*.fai
 
-# SAM intermediário — grande (128 MB), não versionar
-*.sam
+# Anotações da referência: não usadas nesta aula
+data/ref_genome/*.gbff
+data/ref_genome/*.gff
 
-# Saídas geradas pelos alunos durante a aula (bcf, vcf, índices, etc.)
-data/results/
+# --- Saídas geradas pelos alunos durante a aula ---
+# Ignoramos o CONTEÚDO de results/, não a pasta em si: o git não desce em
+# diretórios ignorados, e precisamos abrir uma exceção lá dentro.
+results/*
 
-# Ignorar BAM/BAI por padrão, EXCETO o BAM inicial da aula (ponto de partida)
-*.bam
-*.bai
-!data/bam/SRR2584866.aligned.sorted.bam
+# EXCEÇÃO: o BAM ordenado é o ponto de partida da aula e precisa ser versionado.
+# (É o resultado das etapas do episódio que pulamos — ver Seção 0.)
+!results/bam/
+results/bam/*
+!results/bam/SRR2584866.aligned.sorted.bam

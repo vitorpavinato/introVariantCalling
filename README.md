@@ -6,8 +6,7 @@ episódios 4 e 5. O material foi convertido em **notebooks Jupyter** para rodar 
 [Binder](https://mybinder.org), permitindo que os alunos executem os comandos ou acompanhem
 a demonstração diretamente no navegador, sem instalar nada.
 
-<!-- Substitua USUARIO/REPO pelo caminho do seu repositório no GitHub após o push -->
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/USUARIO/REPO/HEAD?labpath=notebooks)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/vitorpavinato/introVariantCalling/HEAD?labpath=notebooks%2Fvariant-calling.ipynb)
 
 ## Notebooks
 

@@ -12,8 +12,10 @@ a demonstração diretamente no navegador, sem nenhuma instalação.
 
 | Notebook | Conteúdo |
 |----------|----------|
-| `notebooks/variant-calling.ipynb` | Chamada de variantes a partir de um arquivo contendo alinhamento: inspeção e indexação do BAM, `bcftools mpileup`/`call`, filtragem, e visualização com `samtools tview` + IGV-Web |
-| `notebooks/multi-sample-variant-calling.ipynb`          | Lição — *(a definir)* |
+| `notebooks/variant-calling.ipynb` | Fluxo completo a partir de alinhamentos prontos: inspeção e indexação do BAM, `bcftools mpileup`/`call`, filtragem, visualização (`samtools tview` + IGV-Web), **automação** com laço `for` sobre 3 amostras e **chamada conjunta** (VCF multi-amostra) |
+
+Baseado nos episódios 4 (chamada de variantes) e 5 (automação) do Data Carpentry,
+com uma extensão própria de **chamada conjunta multi-amostra**.
 
 ### Visualização no IGV-Web
 

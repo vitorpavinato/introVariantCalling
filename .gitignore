@@ -29,11 +29,14 @@ data/ref_genome/*.gff
 # diretórios ignorados, e precisamos abrir uma exceção lá dentro.
 results/*
 
-# EXCEÇÃO: o BAM ordenado é o ponto de partida da aula e precisa ser versionado.
-# (É o resultado das etapas do episódio que pulamos — ver Seção 0.)
+# EXCEÇÃO: os 3 BAMs ordenados são o ponto de partida da aula e precisam ser
+# versionados (resultado das etapas que pulamos — ver Seção 0). O .bai de cada
+# um NÃO é versionado: os alunos o geram (Seção 2 / laço da Seção 7).
 !results/bam/
 results/bam/*
+!results/bam/SRR2584863.aligned.sorted.bam
 !results/bam/SRR2584866.aligned.sorted.bam
+!results/bam/SRR2589044.aligned.sorted.bam
 
 # EXCEÇÃO: o VCF final (110 KB) é versionado para poder ser carregado por URL
 # no IGV-Web (Seção 6), sem que o aluno precise baixar nada do Binder.
